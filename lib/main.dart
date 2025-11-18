@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tamkeen/core/utils/app_assets.dart';
 
 void main() {
   runApp(const Tamkeen());
@@ -9,6 +10,9 @@ class Tamkeen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(body: Image.asset(Assets.audioengineering_course)),
+    );
   }
 }
