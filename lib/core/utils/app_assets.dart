@@ -5,7 +5,8 @@ class Assets {
   static const String blendercourse =
       "assets/A 3D render of a futuristic city for a Blender course.png";
 
-  static const String onboarding_image = "assets/onboarding.png";
+  static const String onboarding_image =
+      "assets/AB6AXuCJYJLRhbizuSTX7swhVN95qHjcT0daVs15OGTLnaJaiXu0y5JH-hRa8H_t9nBmB5QOJeIPzqk5pHVdUGYO-pFzh58pQRLZ6uNw2zGLspeaywmkyslmDhco8dgIl_2nIBX6jW0b1689B00_9Q66a07dNbAnaqChOrTMzTnr-tZENw5gRyrzxc1XyOUa8X.png";
 
   static const String generative_art =
       "assets/Abstract digital art for a course on generative art.png";
