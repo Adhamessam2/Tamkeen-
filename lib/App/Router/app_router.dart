@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:tamkeen/features/Auth/presentation/Login.dart';
-import 'package:tamkeen/features/Auth/signup.dart';
+import 'package:tamkeen/features/Auth/presentation/pages/signup.dart';
 
 final GoRouter router = GoRouter(
   routes: [
