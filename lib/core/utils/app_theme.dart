@@ -6,6 +6,7 @@ import 'package:tamkeen/core/utils/appcolors.dart';
 abstract final class AppTheme {
   // The FlexColorScheme defined light mode ThemeData.
   static ThemeData light = FlexThemeData.light(
+    useMaterial3: false,
     // Using FlexColorScheme built-in FlexScheme enum based colors
     colors: FlexSchemeColor(
       primary: AppColors.blue,
