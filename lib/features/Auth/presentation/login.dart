@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tamkeen/core/utils/text_styles.dart';
+import 'package:tamkeen/core/utils/app_text_styles.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});

@@ -1,10 +1,22 @@
 import 'package:go_router/go_router.dart';
 import 'package:tamkeen/features/Auth/presentation/Login.dart';
 import 'package:tamkeen/features/Auth/presentation/pages/signup.dart';
+import 'package:tamkeen/features/splash_screen/splash_lottie';
 
 final GoRouter router = GoRouter(
+  initialLocation: '/splash',
   routes: [
-    GoRoute(path: "/", builder: (context, state) => const Login()),
-    GoRoute(path: "/signup", builder: (context, state) => const Signup()),
+    GoRoute(
+      path: '/splash',
+      builder: (context, state) => const CustomSplashScreen(),
+    ),
+    GoRoute(
+      path: '/',
+      builder: (context, state) => const Login(),
+    ),
+    GoRoute(
+      path: '/signup',
+      builder: (context, state) => const Signup(),
+    ),
   ],
 );

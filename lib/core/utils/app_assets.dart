@@ -47,7 +47,7 @@ class Assets {
 
   static const String container = "assets/Container.png";
 
-  static const String icon = "assets/Icon.png";
+  static const String splash = "assets/Icon.png";
 
   static const String person = "assets/Icon (1).png";
 
