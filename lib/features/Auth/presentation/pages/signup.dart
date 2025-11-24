@@ -8,12 +8,17 @@ import 'package:tamkeen/features/Auth/presentation/widgets/authcontainer.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/backgroundcontainer.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/customtextformield.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/icon_container.dart';
+import 'package:tamkeen/features/Auth/presentation/widgets/passwordfield.dart';
 
 class Signup extends StatelessWidget {
   const Signup({super.key});
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController emailController = TextEditingController();
+    TextEditingController nameController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
+    TextEditingController confirmPasswordController = TextEditingController();
     final colors = Theme.of(context).colorScheme;
     return Scaffold(
       body: Backgroundcontainer(
@@ -23,7 +28,7 @@ class Signup extends StatelessWidget {
             SizedBox(height: 130),
             Center(
               child: Auth_container(
-                height: 550,
+                height: 580,
                 child: Padding(
                   padding: const EdgeInsets.all(30.0),
                   child: Column(
@@ -34,6 +39,7 @@ class Signup extends StatelessWidget {
                         width: 320,
                         height: 60,
                         child: CustomTextFormfield(
+                          controller: nameController,
                           hintText: "Full Name",
                           isPassword: false,
                         ),
@@ -42,6 +48,7 @@ class Signup extends StatelessWidget {
                       SizedBox(
                         width: 320,
                         child: CustomTextFormfield(
+                          controller: emailController,
                           hintText: "Email",
                           isPassword: false,
                         ),
@@ -49,15 +56,13 @@ class Signup extends StatelessWidget {
                       SizedBox(height: 25),
                       SizedBox(
                         width: 320,
-                        child: CustomTextFormfield(
-                          hintText: "Password",
-                          isPassword: true,
-                        ),
+                        child: PasswordField(controller: passwordController),
                       ),
                       SizedBox(height: 25),
                       SizedBox(
                         width: 320,
                         child: CustomTextFormfield(
+                          controller: confirmPasswordController,
                           hintText: "Confirm Password",
                           isPassword: true,
                         ),

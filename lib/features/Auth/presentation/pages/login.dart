@@ -14,6 +14,8 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController emailController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
     final colors = Theme.of(context).colorScheme;
     return Scaffold(
       body: Backgroundcontainer(
@@ -44,6 +46,7 @@ class Login extends StatelessWidget {
                         width: 320,
                         height: 60,
                         child: CustomTextFormfield(
+                          controller: emailController,
                           hintText: "Enter your email",
                           isPassword: false,
                         ),
@@ -62,6 +65,7 @@ class Login extends StatelessWidget {
                       SizedBox(
                         width: 320,
                         child: CustomTextFormfield(
+                          controller: passwordController,
                           hintText: "Enter your password",
                           isPassword: true,
                         ),
