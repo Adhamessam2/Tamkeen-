@@ -5,7 +5,7 @@ import 'package:tamkeen/core/utils/app_text_styles.dart';
 import 'package:tamkeen/core/widgets/assistant.dart';
 import 'package:tamkeen/core/widgets/commonbutton.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/authcontainer.dart';
-import 'package:tamkeen/features/Auth/presentation/widgets/backgroundcontainer.dart';
+import 'package:tamkeen/core/widgets/backgroundcontainer.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/customtextformield.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/icon_container.dart';
 
@@ -14,6 +14,8 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController emailController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
     final colors = Theme.of(context).colorScheme;
     return Scaffold(
       body: Backgroundcontainer(
@@ -44,6 +46,7 @@ class Login extends StatelessWidget {
                         width: 320,
                         height: 60,
                         child: CustomTextFormfield(
+                          controller: emailController,
                           hintText: "Enter your email",
                           isPassword: false,
                         ),
@@ -62,23 +65,42 @@ class Login extends StatelessWidget {
                       SizedBox(
                         width: 320,
                         child: CustomTextFormfield(
+                          controller: passwordController,
                           hintText: "Enter your password",
                           isPassword: true,
                         ),
                       ),
                       SizedBox(height: 40),
                       Commonbutton(
+                        width: 320,
+                        height: 55,
                         text: 'Login',
                         onPressed: () {
-                          GoRouter.of(context).push('/signup');
+                          GoRouter.of(context).push('/home');
                         },
                       ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Forgot Password?",
-                          style: AppTextStyles.style3,
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Forgot Password?",
+                              style: AppTextStyles.style3,
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              GoRouter.of(context).push('/signup');
+                            },
+                            child: Text(
+                              "Sign up",
+                              style: AppTextStyles.style3.copyWith(
+                                color: colors.secondary,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
