@@ -17,7 +17,7 @@ class PasswordStrengthBar extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             child: LinearProgressIndicator(
               value: strength,
-              minHeight: 6,
+              minHeight: 7,
               backgroundColor: Colors.white.withValues(alpha: 0.1),
               valueColor: AlwaysStoppedAnimation<Color>(
                 strengthColor(strength),

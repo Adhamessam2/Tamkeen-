@@ -7,11 +7,13 @@ double calculatePasswordStrength(String value) {
 
   if (value.length >= 6) strength += 0.25;
   if (value.length >= 8) strength += 0.25;
-  if (RegExp(r'[A-Z]').hasMatch(value) && RegExp(r'[a-z]').hasMatch(value))
+  if (RegExp(r'[A-Z]').hasMatch(value) && RegExp(r'[a-z]').hasMatch(value)) {
     strength += 0.25;
+  }
   if (RegExp(r'[0-9]').hasMatch(value) ||
-      RegExp(r'[!@#\$%^&*(),.?":{}|<>]').hasMatch(value))
+      RegExp(r'[!@#\$%^&*(),.?":{}|<>]').hasMatch(value)) {
     strength += 0.25;
+  }
 
   return strength.clamp(0, 1);
 }

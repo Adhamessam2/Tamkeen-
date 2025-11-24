@@ -5,7 +5,7 @@ import 'package:tamkeen/core/utils/app_text_styles.dart';
 import 'package:tamkeen/core/widgets/assistant.dart';
 import 'package:tamkeen/core/widgets/commonbutton.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/authcontainer.dart';
-import 'package:tamkeen/features/Auth/presentation/widgets/backgroundcontainer.dart';
+import 'package:tamkeen/core/widgets/backgroundcontainer.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/customtextformield.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/icon_container.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/passwordfield.dart';
@@ -68,7 +68,14 @@ class Signup extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 40),
-                      Commonbutton(text: 'Sign up', onPressed: () {}),
+                      Commonbutton(
+                        width: 320,
+                        height: 55,
+                        text: 'Sign up',
+                        onPressed: () {
+                          GoRouter.of(context).push('/home');
+                        },
+                      ),
                     ],
                   ),
                 ),
@@ -87,7 +94,7 @@ class Signup extends StatelessWidget {
                 Iconcontainer(icon: EvaIcons.twitter),
               ],
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

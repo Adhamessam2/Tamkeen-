@@ -5,7 +5,7 @@ import 'package:tamkeen/core/utils/app_text_styles.dart';
 import 'package:tamkeen/core/widgets/assistant.dart';
 import 'package:tamkeen/core/widgets/commonbutton.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/authcontainer.dart';
-import 'package:tamkeen/features/Auth/presentation/widgets/backgroundcontainer.dart';
+import 'package:tamkeen/core/widgets/backgroundcontainer.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/customtextformield.dart';
 import 'package:tamkeen/features/Auth/presentation/widgets/icon_container.dart';
 
@@ -72,17 +72,35 @@ class Login extends StatelessWidget {
                       ),
                       SizedBox(height: 40),
                       Commonbutton(
+                        width: 320,
+                        height: 55,
                         text: 'Login',
                         onPressed: () {
-                          GoRouter.of(context).push('/signup');
+                          GoRouter.of(context).push('/home');
                         },
                       ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Forgot Password?",
-                          style: AppTextStyles.style3,
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Forgot Password?",
+                              style: AppTextStyles.style3,
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              GoRouter.of(context).push('/signup');
+                            },
+                            child: Text(
+                              "Sign up",
+                              style: AppTextStyles.style3.copyWith(
+                                color: colors.secondary,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

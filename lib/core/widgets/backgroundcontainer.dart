@@ -15,7 +15,12 @@ class Backgroundcontainer extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [colors.errorContainer, colors.secondary, colors.primary],
+          colors: [
+            colors.errorContainer,
+            colors.secondary,
+            colors.primary,
+            colors.errorContainer,
+          ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
