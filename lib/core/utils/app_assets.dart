@@ -56,7 +56,7 @@ class Assets {
 
   static const String image = "assets/Image.png";
 
-  static const String onbaoarding21 = "assets/onboarding21.png";
+  static const String onbaoarding21 = "assets/matched_network.png";
 
   static const String image1 = "assets/Image (1).png";
 
