@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:tamkeen/core/utils/app_assets.dart';
 import 'package:tamkeen/core/utils/app_text_styles.dart';
 import 'package:tamkeen/core/widgets/backgroundcontainer.dart';
 import 'package:tamkeen/core/widgets/commonbutton.dart';
+import 'package:tamkeen/features/onboardings/presentation/widgets/pageindicator.dart';
 
 class Onboarding1 extends StatelessWidget {
   final PageController controller;
@@ -12,7 +12,6 @@ class Onboarding1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
     return Scaffold(
       body: Backgroundcontainer(
         colors: Theme.of(context).colorScheme,
@@ -42,24 +41,7 @@ class Onboarding1 extends StatelessWidget {
                 style: AppTextStyles.style3,
               ),
               SizedBox(height: 130),
-              SmoothPageIndicator(
-                controller: controller,
-                count: 4,
-                effect: CustomizableEffect(
-                  dotDecoration: DotDecoration(
-                    color: colors.onPrimary.withValues(alpha: 0.5),
-                    width: 16,
-                    height: 6,
-                    borderRadius: BorderRadius.circular(3),
-                  ),
-                  activeDotDecoration: DotDecoration(
-                    color: colors.primary,
-                    width: 30,
-                    height: 6,
-                    borderRadius: BorderRadius.circular(3),
-                  ),
-                ),
-              ),
+              Pageindicator(controller: controller),
               SizedBox(height: 30),
               Commonbutton(
                 text: "Begin Journey",

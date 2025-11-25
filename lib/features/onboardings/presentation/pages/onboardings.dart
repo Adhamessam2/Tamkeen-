@@ -13,7 +13,7 @@ class Onboarding extends StatelessWidget {
         controller: pagecontroller,
         children: [
           Onboarding1(controller: pagecontroller),
-          Onboarding2(),
+          Onboarding2(controller: pagecontroller),
         ],
       ),
     );
