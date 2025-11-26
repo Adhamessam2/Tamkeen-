@@ -53,16 +53,16 @@ class _CustomSplashScreenState extends State<CustomSplashScreen>
     _fadeController.forward();
 
     
-    _loadingController.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        Future.delayed(const Duration(milliseconds: 700), () {
-          if (mounted) {
-            context.go('/');
-          }
-        });
-      }
-    });
-  }
+//     _loadingController.addStatusListener((status) {
+//       if (status == AnimationStatus.completed) {
+//         Future.delayed(const Duration(milliseconds: 700), () {
+//           if (mounted) {
+//             context.go('/');
+//           }
+//         });
+//       }
+//     });
+//   }
 
   @override
   void dispose() {
@@ -119,25 +119,25 @@ class _CustomSplashScreenState extends State<CustomSplashScreen>
                 ),
                 const SizedBox(height: 40),
                 
-                Text(
-                  'Learning Without',
-                  style: TextStyles.style2.copyWith(
-                    fontSize: 28,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-                Text(
-                  'Barriers',
-                  style: TextStyles.style2.copyWith(
-                    fontSize: 28,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-                const Spacer(flex: 3),
+//                 Text(
+//                   'Learning Without',
+//                   style: TextStyles.style2.copyWith(
+//                     fontSize: 28,
+//                     fontWeight: FontWeight.w600,
+//                     color: Colors.white,
+//                     letterSpacing: 0.5,
+//                   ),
+//                 ),
+//                 Text(
+//                   'Barriers',
+//                   style: TextStyles.style2.copyWith(
+//                     fontSize: 28,
+//                     fontWeight: FontWeight.w600,
+//                     color: Colors.white,
+//                     letterSpacing: 0.5,
+//                   ),
+//                 ),
+//                 const Spacer(flex: 3),
                 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),

@@ -17,7 +17,7 @@ abstract final class AppTheme {
       tertiaryContainer: AppColors.lightpurple,
       appBarColor: Color(0xFFFFDBCF),
       error: AppColors.darkpink,
-      errorContainer: Color(0xFFFFDAD6),
+      errorContainer: AppColors.darkblue,
     ),
     // Component theme configurations for light mode.
     subThemesData: const FlexSubThemesData(
