@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:tamkeen/core/utils/app_text_styles.dart';
 import 'package:tamkeen/core/utils/appcolors.dart';
 
-
 class CustomSplashScreen extends StatefulWidget {
   const CustomSplashScreen({super.key});
 
@@ -24,7 +23,7 @@ class _CustomSplashScreenState extends State<CustomSplashScreen>
   void initState() {
     super.initState();
 
-  
+    // Glow animation controller
     _glowController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 2000),
@@ -34,13 +33,13 @@ class _CustomSplashScreenState extends State<CustomSplashScreen>
       CurvedAnimation(parent: _glowController, curve: Curves.easeInOut),
     );
 
-
+    // Loading animation controller
     _loadingController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 2500),
     )..forward();
 
-    
+    // Fade animation controller
     _fadeController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 800),
@@ -52,12 +51,12 @@ class _CustomSplashScreenState extends State<CustomSplashScreen>
 
     _fadeController.forward();
 
-    
+    // Navigation after loading completes
     _loadingController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         Future.delayed(const Duration(milliseconds: 700), () {
           if (mounted) {
-            context.go('/onboarding');
+            context.go('/');
           }
         });
       }
@@ -93,6 +92,7 @@ class _CustomSplashScreenState extends State<CustomSplashScreen>
               children: [
                 const Spacer(flex: 2),
                 
+                // Logo with glow effect
                 AnimatedBuilder(
                   animation: _glowAnimation,
                   builder: (context, child) {
@@ -111,14 +111,15 @@ class _CustomSplashScreenState extends State<CustomSplashScreen>
                         ],
                       ),
                       child: Image.asset(
-                      'assets/Icon.png',
-                      fit: BoxFit.contain,
+                        'assets/Icon.png',
+                        fit: BoxFit.contain,
                       ),
                     );
                   },
                 ),
                 const SizedBox(height: 40),
                 
+                // App title
                 Text(
                   'Learning Without',
                   style: AppTextStyles.style2.copyWith(
@@ -139,11 +140,11 @@ class _CustomSplashScreenState extends State<CustomSplashScreen>
                 ),
                 const Spacer(flex: 3),
                 
+                // Loading bar
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),
                   child: Column(
                     children: [
-                      
                       AnimatedBuilder(
                         animation: _loadingController,
                         builder: (context, child) {
@@ -158,7 +159,7 @@ class _CustomSplashScreenState extends State<CustomSplashScreen>
                               children: [
                                 Container(
                                   decoration: BoxDecoration(
-                                    gradient: LinearGradient(
+                                    gradient: const LinearGradient(
                                       colors: [
                                         Color(0xFF00C6FF),
                                         Color(0xFF0072FF),
@@ -183,7 +184,7 @@ class _CustomSplashScreenState extends State<CustomSplashScreen>
                           );
                         },
                       ),
-                    
+                      const SizedBox(height: 50),
                     ],
                   ),
                 ),
