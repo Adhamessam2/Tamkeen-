@@ -56,7 +56,7 @@ class _CustomSplashScreenState extends State<CustomSplashScreen>
       if (status == AnimationStatus.completed) {
         Future.delayed(const Duration(milliseconds: 700), () {
           if (mounted) {
-            context.go('/');
+            context.go('/onboarding');
           }
         });
       }
