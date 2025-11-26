@@ -20,104 +20,108 @@ class Login extends StatelessWidget {
     return Scaffold(
       body: Backgroundcontainer(
         colors: colors,
-        child: Column(
+        child: ListView(
           children: [
-            SizedBox(height: 130),
-            Center(
-              child: Auth_container(
-                height: 477,
-                child: Padding(
-                  padding: const EdgeInsets.all(30.0),
-                  child: Column(
-                    children: [
-                      Text('welcome Back', style: AppTextStyles.style2),
-                      SizedBox(height: 33),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Email",
-                          style: AppTextStyles.style1.copyWith(
-                            color: Colors.white.withValues(alpha: 0.8),
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 10),
-                      SizedBox(
-                        width: 320,
-                        height: 60,
-                        child: CustomTextFormfield(
-                          controller: emailController,
-                          hintText: "Enter your email",
-                          isPassword: false,
-                        ),
-                      ),
-                      SizedBox(height: 25),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Password",
-                          style: AppTextStyles.style1.copyWith(
-                            color: Colors.white.withValues(alpha: 0.8),
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 10),
-                      SizedBox(
-                        width: 320,
-                        child: CustomTextFormfield(
-                          controller: passwordController,
-                          hintText: "Enter your password",
-                          isPassword: true,
-                        ),
-                      ),
-                      SizedBox(height: 40),
-                      Commonbutton(
-                        width: 320,
-                        height: 55,
-                        text: 'Login',
-                        onPressed: () {
-                          GoRouter.of(context).push('/home');
-                        },
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+            Column(
+              children: [
+                SizedBox(height: 130),
+                Center(
+                  child: Auth_container(
+                    height: 477,
+                    child: Padding(
+                      padding: const EdgeInsets.all(30.0),
+                      child: Column(
                         children: [
-                          TextButton(
-                            onPressed: () {},
+                          Text('welcome Back', style: AppTextStyles.style2),
+                          SizedBox(height: 33),
+                          Align(
+                            alignment: Alignment.centerLeft,
                             child: Text(
-                              "Forgot Password?",
-                              style: AppTextStyles.style3,
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              GoRouter.of(context).push('/signup');
-                            },
-                            child: Text(
-                              "Sign up",
-                              style: AppTextStyles.style3.copyWith(
-                                color: colors.secondary,
+                              "Email",
+                              style: AppTextStyles.style1.copyWith(
+                                color: Colors.white.withValues(alpha: 0.8),
                               ),
                             ),
                           ),
+                          SizedBox(height: 10),
+                          SizedBox(
+                            width: 320,
+                            height: 60,
+                            child: CustomTextFormfield(
+                              controller: emailController,
+                              hintText: "Enter your email",
+                              isPassword: false,
+                            ),
+                          ),
+                          SizedBox(height: 25),
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "Password",
+                              style: AppTextStyles.style1.copyWith(
+                                color: Colors.white.withValues(alpha: 0.8),
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          SizedBox(
+                            width: 320,
+                            child: CustomTextFormfield(
+                              controller: passwordController,
+                              hintText: "Enter your password",
+                              isPassword: true,
+                            ),
+                          ),
+                          SizedBox(height: 40),
+                          Commonbutton(
+                            width: 320,
+                            height: 55,
+                            text: 'Login',
+                            onPressed: () {
+                              GoRouter.of(context).push('/home');
+                            },
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              TextButton(
+                                onPressed: () {},
+                                child: Text(
+                                  "Forgot Password?",
+                                  style: AppTextStyles.style3,
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: () {
+                                  GoRouter.of(context).push('/signup');
+                                },
+                                child: Text(
+                                  "Sign up",
+                                  style: AppTextStyles.style3.copyWith(
+                                    color: colors.secondary,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
-            ),
-            SizedBox(height: 40),
-            Text("Or continue with", style: AppTextStyles.style3),
-            SizedBox(height: 40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Iconcontainer(icon: EvaIcons.google),
-                SizedBox(width: 20),
-                Iconcontainer(icon: EvaIcons.facebook),
-                SizedBox(width: 20),
-                Iconcontainer(icon: EvaIcons.twitter),
+                SizedBox(height: 40),
+                Text("Or continue with", style: AppTextStyles.style3),
+                SizedBox(height: 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Iconcontainer(icon: EvaIcons.google),
+                    SizedBox(width: 20),
+                    Iconcontainer(icon: EvaIcons.facebook),
+                    SizedBox(width: 20),
+                    Iconcontainer(icon: EvaIcons.twitter),
+                  ],
+                ),
               ],
             ),
           ],

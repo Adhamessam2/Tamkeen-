@@ -32,7 +32,7 @@ class Onboarding2 extends StatelessWidget {
               child: Column(
                 children: [
                   Rotatedcontainer(
-                    image: Assets.onbaoarding21,
+                    image: "assets/matched_network.png",
                     angle: -0.1,
                     text: "Smart Recommendations",
                     text2: "Courses curated for your goals.",
