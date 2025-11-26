@@ -1,197 +1,197 @@
-// import 'package:flutter/material.dart';
-// import 'package:lottie/lottie.dart';
-// import 'package:go_router/go_router.dart';
-// import 'package:tamkeen/core/utils/app_text_styles.dart';
-// import 'package:tamkeen/core/utils/appcolors.dart';
+import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+import 'package:go_router/go_router.dart';
+import 'package:tamkeen/core/utils/app_text_styles.dart';
+import 'package:tamkeen/core/utils/appcolors.dart';
 
 
-// class CustomSplashScreen extends StatefulWidget {
-//   const CustomSplashScreen({super.key});
+class CustomSplashScreen extends StatefulWidget {
+  const CustomSplashScreen({super.key});
 
-//   @override
-//   State<CustomSplashScreen> createState() => _CustomSplashScreenState();
-// }
+  @override
+  State<CustomSplashScreen> createState() => _CustomSplashScreenState();
+}
 
-// class _CustomSplashScreenState extends State<CustomSplashScreen>
-//     with TickerProviderStateMixin {
-//   late AnimationController _glowController;
-//   late AnimationController _loadingController;
-//   late AnimationController _fadeController;
-//   late Animation<double> _glowAnimation;
-//   late Animation<double> _fadeAnimation;
+class _CustomSplashScreenState extends State<CustomSplashScreen>
+    with TickerProviderStateMixin {
+  late AnimationController _glowController;
+  late AnimationController _loadingController;
+  late AnimationController _fadeController;
+  late Animation<double> _glowAnimation;
+  late Animation<double> _fadeAnimation;
 
-//   @override
-//   void initState() {
-//     super.initState();
+  @override
+  void initState() {
+    super.initState();
 
   
-//     _glowController = AnimationController(
-//       vsync: this,
-//       duration: const Duration(milliseconds: 2000),
-//     )..repeat(reverse: true);
+    _glowController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 2000),
+    )..repeat(reverse: true);
 
-//     _glowAnimation = Tween<double>(begin: 0.3, end: 1.0).animate(
-//       CurvedAnimation(parent: _glowController, curve: Curves.easeInOut),
-//     );
+    _glowAnimation = Tween<double>(begin: 0.3, end: 1.0).animate(
+      CurvedAnimation(parent: _glowController, curve: Curves.easeInOut),
+    );
 
 
-//     _loadingController = AnimationController(
-//       vsync: this,
-//       duration: const Duration(milliseconds: 2500),
-//     )..forward();
-
-    
-//     _fadeController = AnimationController(
-//       vsync: this,
-//       duration: const Duration(milliseconds: 800),
-//     );
-
-//     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
-//       CurvedAnimation(parent: _fadeController, curve: Curves.easeIn),
-//     );
-
-//     _fadeController.forward();
+    _loadingController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 2500),
+    )..forward();
 
     
-//     _loadingController.addStatusListener((status) {
-//       if (status == AnimationStatus.completed) {
-//         Future.delayed(const Duration(milliseconds: 700), () {
-//           if (mounted) {
-//             context.go('/');
-//           }
-//         });
-//       }
-//     });
-//   }
+    _fadeController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 800),
+    );
 
-//   @override
-//   void dispose() {
-//     _glowController.dispose();
-//     _loadingController.dispose();
-//     _fadeController.dispose();
-//     super.dispose();
-//   }
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _fadeController, curve: Curves.easeIn),
+    );
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Container(
-//         decoration: BoxDecoration(
-//           gradient: LinearGradient(
-//             begin: Alignment.topCenter,
-//             end: Alignment.bottomCenter,
-//             colors: [
-//               AppColors.linearGradient1,
-//               AppColors.linearGradient2,
-//             ],
-//           ),
-//         ),
-//         child: SafeArea(
-//           child: FadeTransition(
-//             opacity: _fadeAnimation,
-//             child: Column(
-//               children: [
-//                 const Spacer(flex: 2),
+    _fadeController.forward();
+
+    
+    _loadingController.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        Future.delayed(const Duration(milliseconds: 700), () {
+          if (mounted) {
+            context.go('/');
+          }
+        });
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _glowController.dispose();
+    _loadingController.dispose();
+    _fadeController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              AppColors.linearGradient1,
+              AppColors.linearGradient2,
+            ],
+          ),
+        ),
+        child: SafeArea(
+          child: FadeTransition(
+            opacity: _fadeAnimation,
+            child: Column(
+              children: [
+                const Spacer(flex: 2),
                 
-//                 AnimatedBuilder(
-//                   animation: _glowAnimation,
-//                   builder: (context, child) {
-//                     return Container(
-//                       width: 120,
-//                       height: 120,
-//                       decoration: BoxDecoration(
-//                         shape: BoxShape.circle,
-//                         boxShadow: [
-//                           BoxShadow(
-//                             color: Colors.blueAccent.withOpacity(
-//                                 _glowAnimation.value * 0.6),
-//                             blurRadius: 60 * _glowAnimation.value,
-//                             spreadRadius: 20 * _glowAnimation.value,
-//                           ),
-//                         ],
-//                       ),
-//                       child: Image.asset(
-//                       'assets/Icon.png',
-//                       fit: BoxFit.contain,
-//                       ),
-//                     );
-//                   },
-//                 ),
-//                 const SizedBox(height: 40),
+                AnimatedBuilder(
+                  animation: _glowAnimation,
+                  builder: (context, child) {
+                    return Container(
+                      width: 120,
+                      height: 120,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.blueAccent.withOpacity(
+                                _glowAnimation.value * 0.6),
+                            blurRadius: 60 * _glowAnimation.value,
+                            spreadRadius: 20 * _glowAnimation.value,
+                          ),
+                        ],
+                      ),
+                      child: Image.asset(
+                      'assets/Icon.png',
+                      fit: BoxFit.contain,
+                      ),
+                    );
+                  },
+                ),
+                const SizedBox(height: 40),
                 
-//                 Text(
-//                   'Learning Without',
-//                   style: TextStyles.style2.copyWith(
-//                     fontSize: 28,
-//                     fontWeight: FontWeight.w600,
-//                     color: Colors.white,
-//                     letterSpacing: 0.5,
-//                   ),
-//                 ),
-//                 Text(
-//                   'Barriers',
-//                   style: TextStyles.style2.copyWith(
-//                     fontSize: 28,
-//                     fontWeight: FontWeight.w600,
-//                     color: Colors.white,
-//                     letterSpacing: 0.5,
-//                   ),
-//                 ),
-//                 const Spacer(flex: 3),
+                Text(
+                  'Learning Without',
+                  style: TextStyles.style2.copyWith(
+                    fontSize: 28,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+                Text(
+                  'Barriers',
+                  style: TextStyles.style2.copyWith(
+                    fontSize: 28,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+                const Spacer(flex: 3),
                 
-//                 Padding(
-//                   padding: const EdgeInsets.symmetric(horizontal: 40.0),
-//                   child: Column(
-//                     children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                  child: Column(
+                    children: [
                       
-//                       AnimatedBuilder(
-//                         animation: _loadingController,
-//                         builder: (context, child) {
-//                           return Container(
-//                             height: 6,
-//                             width: double.infinity,
-//                             decoration: BoxDecoration(
-//                               color: Colors.white.withOpacity(0.2),
-//                               borderRadius: BorderRadius.circular(10),
-//                             ),
-//                             child: Stack(
-//                               children: [
-//                                 Container(
-//                                   decoration: BoxDecoration(
-//                                     gradient: LinearGradient(
-//                                       colors: [
-//                                         Color(0xFF00C6FF),
-//                                         Color(0xFF0072FF),
-//                                       ],
-//                                     ),
-//                                     borderRadius: BorderRadius.circular(10),
-//                                     boxShadow: [
-//                                       BoxShadow(
-//                                         color: Colors.blueAccent
-//                                             .withOpacity(0.5),
-//                                         blurRadius: 10,
-//                                         spreadRadius: 1,
-//                                       ),
-//                                     ],
-//                                   ),
-//                                   width: MediaQuery.of(context).size.width *
-//                                       0.7 *
-//                                       _loadingController.value,
-//                                 ),
-//                               ],
-//                             ),
-//                           );
-//                         },
-//                       ),
+                      AnimatedBuilder(
+                        animation: _loadingController,
+                        builder: (context, child) {
+                          return Container(
+                            height: 6,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Stack(
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        Color(0xFF00C6FF),
+                                        Color(0xFF0072FF),
+                                      ],
+                                    ),
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.blueAccent
+                                            .withOpacity(0.5),
+                                        blurRadius: 10,
+                                        spreadRadius: 1,
+                                      ),
+                                    ],
+                                  ),
+                                  width: MediaQuery.of(context).size.width *
+                                      0.7 *
+                                      _loadingController.value,
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
                     
-//                     ],
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
