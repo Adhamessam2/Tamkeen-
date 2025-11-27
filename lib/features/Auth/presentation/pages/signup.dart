@@ -27,7 +27,7 @@ class Signup extends StatelessWidget {
           children: [
             Column(
               children: [
-                SizedBox(height: 130),
+                SizedBox(height: 80),
                 Center(
                   child: Auth_container(
                     height: 580,
@@ -113,7 +113,7 @@ class Signup extends StatelessWidget {
                       child: Text(
                         "Login",
                         style: AppTextStyles.style3.copyWith(
-                          color: colors.errorContainer,
+                          color: colors.primary,
                         ),
                       ),
                     ),

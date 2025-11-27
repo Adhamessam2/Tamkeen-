@@ -47,6 +47,14 @@ class Assets {
 
   static const String container = "assets/Container.png";
 
+  static const String staricon = "assets/star.png";
+
+  static const String lampicon = "assets/lamp.png";
+
+  static const String rocketicon = "assets/rocket.png";
+
+  static const String fireicon = "assets/fire.png";
+
   static const String splash = "assets/Icon.png";
 
   static const String person = "assets/Icon (1).png";
