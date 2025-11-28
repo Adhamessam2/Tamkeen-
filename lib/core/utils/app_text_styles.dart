@@ -20,4 +20,10 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     color: Color(0xffBDC5D1),
   );
+  static TextStyle style4 = TextStyle(
+    fontSize: 22,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w700,
+    color: Colors.white,
+  );
 }

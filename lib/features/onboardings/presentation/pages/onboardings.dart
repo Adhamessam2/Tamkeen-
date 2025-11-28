@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tamkeen/features/onboardings/widgets/onboarding1.dart';
 import 'package:tamkeen/features/onboardings/widgets/onboarding2.dart';
 import 'package:tamkeen/features/onboardings/widgets/onboarding3.dart';
-import 'package:tamkeen/features/onboardings/widgets/onboarding4.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});
@@ -17,7 +16,7 @@ class Onboarding extends StatelessWidget {
           Onboarding1(controller: pagecontroller),
           Onboarding2(controller: pagecontroller),
           Onboarding3(controller: pagecontroller),
-          Onboarding4(),
+          // Onboarding4(),
         ],
       ),
     );

@@ -72,6 +72,10 @@ class Assets {
 
   static const String image3 = "assets/Image (3).png";
 
+  static const String image4 = "assets/Image (4).png";
+
+  static const String bill = "assets/bill.png";
+
   static const String imageBorder = "assets/Image+Border.png";
 
   static const String imageBorderShadow = "assets/Image+Border+Shadow.png";

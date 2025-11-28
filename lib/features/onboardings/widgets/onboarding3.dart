@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:tamkeen/core/utils/app_assets.dart';
 import 'package:tamkeen/core/utils/app_text_styles.dart';
 import 'package:tamkeen/core/utils/appcolors.dart';
@@ -85,10 +86,11 @@ class Onboarding3 extends StatelessWidget {
                 width: 350,
                 height: 60,
                 onPressed: () {
-                  controller.nextPage(
-                    duration: Duration(milliseconds: 500),
-                    curve: Curves.easeIn,
-                  );
+                  // controller.nextPage(
+                  //   duration: Duration(milliseconds: 500),
+                  //   curve: Curves.easeIn,
+                  // );
+                  GoRouter.of(context).push('/login');
                 },
               ),
             ],

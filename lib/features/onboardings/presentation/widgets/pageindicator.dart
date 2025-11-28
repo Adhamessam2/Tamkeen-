@@ -12,7 +12,7 @@ class Pageindicator extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
     return SmoothPageIndicator(
       controller: controller,
-      count: 4,
+      count: 3,
       effect: CustomizableEffect(
         dotDecoration: DotDecoration(
           color: AppColors.gray,
