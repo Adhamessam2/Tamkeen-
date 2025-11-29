@@ -3,6 +3,7 @@ import 'package:tamkeen/features/Auth/presentation/pages/login.dart';
 import 'package:tamkeen/features/Auth/presentation/pages/signup.dart';
 import 'package:tamkeen/features/Home/presentation/pages/home.dart';
 import 'package:tamkeen/features/onboardings/presentation/pages/onboardings.dart';
+import 'package:tamkeen/features/personalize_screen/presentation/personalize_screen.dart';
 import 'package:tamkeen/features/splash_screen/splash_lottie';
 
 final GoRouter router = GoRouter(
@@ -15,5 +16,10 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/login', builder: (context, state) => const Login()),
     GoRoute(path: '/signup', builder: (context, state) => const Signup()),
     GoRoute(path: '/home', builder: (context, state) => const Home()),
+    GoRoute(
+  path: '/personalize',
+  builder: (context, state) => const PersonalizeScreen(),
+),
+
   ],
 );

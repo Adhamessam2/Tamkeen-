@@ -78,7 +78,7 @@ class Login extends StatelessWidget {
                             height: 55,
                             text: 'Login',
                             onPressed: () {
-                              GoRouter.of(context).push('/home');
+                              GoRouter.of(context).push('/personalize');
                             },
                           ),
                           Row(

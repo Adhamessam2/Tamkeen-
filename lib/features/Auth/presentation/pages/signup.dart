@@ -77,7 +77,7 @@ class Signup extends StatelessWidget {
                             height: 55,
                             text: 'Sign up',
                             onPressed: () {
-                              GoRouter.of(context).push('/home');
+                              GoRouter.of(context).push('/personalize');
                             },
                           ),
                         ],

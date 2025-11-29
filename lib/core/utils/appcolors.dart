@@ -20,4 +20,29 @@ class AppColors {
   static const Color splashGlow = Color(0xFF3B82F6);
   static const Color linearGradient1 = Color(0xFF0A2D6E);
   static const Color linearGradient2 = Color(0xFF3B82F6);
+
+  // Personalize Screen Colors
+  static const Color pageBackground = Color(0xFF020617);
+  static const Color previewOuter = Color(0xFF0B1120);
+  static const Color previewInner = Color(0xFF1D4ED8);
+  static const Color previewCard = Color(0xFF020617);
+  static const Color sectionCard = Color(0xFF020617);
+  static const Color sectionBorder = Color(0xFF1E293B);
+  static const Color sliderTrack = Color(0xFF1E293B);
+  static const Color sliderActive = Color(0xFF3B82F6);
+  static const Color toggleBg = Color(0xFF0F172A);
+  static const Color toggleThumb = Color(0xFF3B82F6);
+  static const Color dotSelectedBorder = Color(0xFF38BDF8);
+  static const Color dot1 = Color(0xFF0EA5E9);
+  static const Color dot2 = Color(0xFFE879F9);
+  static const Color dot3 = Color(0xFF38BDF8);
+  static const Color saveButton = Color(0xFF22C55E);
+  static const Color saveButtonText = Colors.white;
+  static const Color secondaryText = Color(0xFF9CA3AF);
+  
+  // Gradient Colors - Updated to match design
+  static const Color bgGradientTop = Color(0xFF0A1F44);
+  static const Color bgGradientBottom = Color(0xFF1A3A6E);
+  static const Color btnGradientStart = Color(0xFF2563EB);
+  static const Color btnGradientEnd = Color(0xFF10B981);
 }
