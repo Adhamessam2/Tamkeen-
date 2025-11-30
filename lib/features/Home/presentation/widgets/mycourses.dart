@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:tamkeen/core/utils/app_text_styles.dart';
 
-class Mycoureses extends StatelessWidget {
+class Mycouresesprogress extends StatelessWidget {
   final String image;
   final String text;
   final String text2;
   final String text3;
-  const Mycoureses({
+  const Mycouresesprogress({
     super.key,
     required this.colors,
     required this.image,

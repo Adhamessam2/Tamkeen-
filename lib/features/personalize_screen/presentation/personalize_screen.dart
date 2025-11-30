@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:tamkeen/core/utils/appcolors.dart';
 import 'package:tamkeen/core/utils/app_text_styles.dart';
 import 'package:tamkeen/features/personalize_screen/widgets/CardContainer.dart';
@@ -102,8 +103,7 @@ class PersonalizeScreen extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {
-                          // TODO: navigate to home
-                          // context.go('/home');
+                          GoRouter.of(context).push('/home');
                         },
                         child: Text(
                           'Save & Continue',
