@@ -6,7 +6,7 @@ import 'package:tamkeen/features/Home/presentation/widgets/navbaritems.dart';
 import 'package:tamkeen/features/community/presentation/community.dart';
 import 'package:tamkeen/features/mycoureses.dart/presentation/mycourses.dart';
 import 'package:tamkeen/features/profile/presentation/profile.dart';
-import 'package:tamkeen/features/search/presentation/search.dart';
+import 'package:tamkeen/features/search/presentation/pages/search.dart';
 
 class Bottomnavbar extends StatelessWidget {
   const Bottomnavbar({super.key});

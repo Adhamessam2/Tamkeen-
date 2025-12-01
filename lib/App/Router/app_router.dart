@@ -7,7 +7,7 @@ import 'package:tamkeen/features/mycoureses.dart/presentation/mycourses.dart';
 import 'package:tamkeen/features/onboardings/presentation/pages/onboardings.dart';
 import 'package:tamkeen/features/personalize_screen/presentation/personalize_screen.dart';
 import 'package:tamkeen/features/profile/presentation/profile.dart';
-import 'package:tamkeen/features/search/presentation/search.dart';
+import 'package:tamkeen/features/search/presentation/pages/search.dart';
 import 'package:tamkeen/features/splash_screen/splash_lottie';
 
 final GoRouter router = GoRouter(
