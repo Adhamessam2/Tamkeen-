@@ -91,4 +91,7 @@ class Assets {
 
   static const String prototyping =
       "assets/Thumbnail for the next lesson on advanced prototyping..png";
+  static const String instructoravatar = "assets/Instructor avatar.png";
+  static const String instructoravatar2 = "assets/Instructor avatar 2.png";
+  static const String instructoravatar3 = "assets/Instructor avatar 3.png";
 }

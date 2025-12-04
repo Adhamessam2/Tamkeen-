@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:tamkeen/core/utils/app_text_styles.dart';
 
 class SearchContainer extends StatelessWidget {
   const SearchContainer({super.key, required this.colors});
-
   final ColorScheme colors;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 380,
-      height: 60,
-      decoration: BoxDecoration(
-        color: colors.tertiary,
-        borderRadius: BorderRadius.circular(30),
-      ),
-      child: ListTile(
-        leading: Icon(Icons.search_outlined, color: Colors.white),
-        title: Text('Ask AI to find courses'),
-        textColor: Colors.white,
-        trailing: IconButton(
+    return TextFormField(
+      decoration: InputDecoration(
+        prefixIcon: Icon(Icons.search_outlined, color: Colors.white),
+        hintText: "Ask AI to find courses",
+        hintStyle: AppTextStyles.style1,
+        fillColor: colors.tertiary,
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        suffixIcon: IconButton(
           onPressed: () {},
           icon: Icon(Icons.mic_none_outlined, color: Colors.white),
         ),

@@ -6,7 +6,7 @@ class AppColors {
   static const Color lightblue = Color(0xff1A73E8);
   static const Color darkblue = Color(0xFF0D1B2A);
   static const Color darkblue2 = Color(0xFF192437);
-  static const Color darkblue3 = Color(0xFF0D1117);
+  static const Color gray1 = Colors.grey;
   static const Color pink = Color(0xFFEC4899);
   static const Color darkpink = Color(0xFFE91E63);
   static const Color purple = Color(0xFF7C3AED);
@@ -39,7 +39,7 @@ class AppColors {
   static const Color saveButton = Color(0xFF22C55E);
   static const Color saveButtonText = Colors.white;
   static const Color secondaryText = Color(0xFF9CA3AF);
-  
+
   // Gradient Colors - Updated to match design
   static const Color bgGradientTop = Color(0xFF0A1F44);
   static const Color bgGradientBottom = Color(0xFF1A3A6E);

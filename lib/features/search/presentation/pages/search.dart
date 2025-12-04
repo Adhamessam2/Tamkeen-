@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tamkeen/features/search/presentation/widgets/courses.dart';
 import 'package:tamkeen/features/search/presentation/widgets/filtercontainer.dart';
 import 'package:tamkeen/features/search/presentation/widgets/searchcontainer.dart';
 
@@ -17,6 +18,9 @@ class Search extends StatelessWidget {
               SearchContainer(colors: colors),
               SizedBox(height: 20),
               FilterContainer(colors: colors),
+              SizedBox(height: 25),
+              Expanded(child: Coureses(colors: colors)),
+              SizedBox(height: 80),
             ],
           ),
         ),

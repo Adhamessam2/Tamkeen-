@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tamkeen/core/utils/appcolors.dart';
 
 class AppTextStyles {
   AppTextStyles._();
@@ -31,5 +32,12 @@ class AppTextStyles {
     fontFamily: 'Inter',
     fontWeight: FontWeight.w700,
     color: Colors.white,
+  );
+
+  static TextStyle style6 = TextStyle(
+    fontSize: 12,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+    color: AppColors.gray1,
   );
 }

@@ -14,7 +14,7 @@ abstract final class AppTheme {
       secondary: AppColors.navy,
       secondaryContainer: AppColors.darkblue2,
       tertiary: AppColors.darkcontainer,
-      tertiaryContainer: AppColors.darkblue3,
+      tertiaryContainer: AppColors.gray1,
       appBarColor: Color(0xFFFFDBCF),
       error: AppColors.green,
       errorContainer: AppColors.darkblue,
